@@ -2,7 +2,7 @@ import { topologySymbol as symbol } from '@libp2p/interface-registrar'
 import type { PeerId } from '@libp2p/interface-peer-id'
 import type { Topology, TopologyInit, onConnectHandler, onDisconnectHandler, Registrar } from '@libp2p/interface-registrar'
 
-const noop = () => {}
+const noop = (): void => {}
 
 class TopologyImpl implements Topology {
   public min: number
@@ -26,22 +26,22 @@ class TopologyImpl implements Topology {
     this.onDisconnect = init.onDisconnect ?? noop
   }
 
-  get [Symbol.toStringTag] () {
+  get [Symbol.toStringTag] (): string {
     return symbol.toString()
   }
 
-  get [symbol] () {
+  get [symbol] (): boolean {
     return true
   }
 
-  async setRegistrar (registrar: Registrar) {
+  async setRegistrar (registrar: Registrar): Promise<void> {
     this.registrar = registrar
   }
 
   /**
    * Notify about peer disconnected event
    */
-  disconnect (peerId: PeerId) {
+  disconnect (peerId: PeerId): void {
     this.onDisconnect(peerId)
   }
 }
