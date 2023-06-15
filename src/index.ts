@@ -30,9 +30,7 @@ class TopologyImpl implements Topology {
     return symbol.toString()
   }
 
-  get [symbol] (): boolean {
-    return true
-  }
+  readonly [symbol] = true
 
   async setRegistrar (registrar: Registrar): Promise<void> {
     this.registrar = registrar
