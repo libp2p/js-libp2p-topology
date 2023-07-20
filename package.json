@@ -157,6 +157,6 @@
     "@libp2p/interface-registrar": "^2.0.3"
   },
   "devDependencies": {
-    "aegir": "^39.0.10"
+    "aegir": "^40.0.0"
   }
 }
