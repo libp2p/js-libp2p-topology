@@ -1,3 +1,5 @@
+# 📁 Archived - this module has been deprecated
+
 # @libp2p/topology <!-- omit in toc -->
 
 [![libp2p.io](https://img.shields.io/badge/project-libp2p-yellow.svg?style=flat-square)](http://libp2p.io/)
